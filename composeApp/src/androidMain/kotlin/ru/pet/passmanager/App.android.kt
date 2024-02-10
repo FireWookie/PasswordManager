@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.arkivanov.decompose.defaultComponentContext
+import ru.pet.passmanager.di.KoinInjector
 import ru.pet.passmanager.presentation.root.component.DefaultRootComponent
 import ru.pet.passmanager.presentation.root.screen.RootScreen
 
@@ -18,6 +19,7 @@ class AndroidApp : Application() {
     override fun onCreate() {
         super.onCreate()
         INSTANCE = this
+        KoinInjector.koinApp.koin
     }
 }
 

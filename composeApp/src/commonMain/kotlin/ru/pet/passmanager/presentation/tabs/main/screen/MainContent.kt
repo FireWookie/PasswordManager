@@ -77,20 +77,20 @@ internal fun MainContent(
 }
 
 
-@OptIn(ExperimentalDecomposeApi::class)
-@Composable
-private fun RowScope.TabNavItem(tab: MainComponent, disableIcon: Int, enableIcon: Int, index: Int) {
-    val selected = tab.pages.value.selectedIndex == index
-    Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
-        TalkClickableItem(
-            isSelect = selected,
-            onClick = { tab.changeTab(index) },
-            sizeModifier = Modifier.size(46.dp)
-        ) {
-            Image(
-                painter = if (selected) enableIcon.painterResource() else disableIcon.painterResource(),
-                contentDescription = null,
-            )
-        }
-    }
-}
+//@OptIn(ExperimentalDecomposeApi::class)
+//@Composable
+//private fun RowScope.TabNavItem(tab: MainComponent, disableIcon: Int, enableIcon: Int, index: Int) {
+//    val selected = tab.pages.value.selectedIndex == index
+//    Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
+//        TalkClickableItem(
+//            isSelect = selected,
+//            onClick = { tab.changeTab(index) },
+//            sizeModifier = Modifier.size(46.dp)
+//        ) {
+//            Image(
+//                painter = if (selected) enableIcon.painterResource() else disableIcon.painterResource(),
+//                contentDescription = null,
+//            )
+//        }
+//    }
+//}

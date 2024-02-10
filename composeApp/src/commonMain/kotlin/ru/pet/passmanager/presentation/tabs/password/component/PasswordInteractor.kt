@@ -14,6 +14,7 @@ class PasswordInteractorImpl: PasswordInteractor, KoinComponent {
     private val db: GetPasswordDBUseCase by inject()
     override suspend fun getAllPassword(state: PasswordState, scope: CoroutineScope): PasswordState {
         db.execute(GetPasswordDBUseCase.Params(), scope)
+        return PasswordState()
     }
 
 }

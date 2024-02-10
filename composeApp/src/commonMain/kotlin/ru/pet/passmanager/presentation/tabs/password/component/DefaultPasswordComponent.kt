@@ -55,6 +55,6 @@ class DefaultPasswordComponent(
     }
 
     private fun getDbData() {
-        store.launchOperation(operation = {  })
+//        store.launchOperation(operation = {  })
     }
 }
