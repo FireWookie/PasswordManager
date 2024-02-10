@@ -1,4 +1,4 @@
-package ru.pet.passmanager.theme
+package ru.pet.passmanager.uikit.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

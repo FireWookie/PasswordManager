@@ -45,8 +45,8 @@ import io.github.alexzhirkevich.cupertino.ExperimentalCupertinoApi
 import ru.pet.passmanager.presentation.auth.component.AuthComponent
 import ru.pet.passmanager.presentation.root.component.DefaultRootComponent
 import ru.pet.passmanager.presentation.root.component.RootComponent
-import ru.pet.passmanager.theme.AppTheme
-import ru.pet.passmanager.theme.LocalThemeIsDark
+import ru.pet.passmanager.uikit.theme.AppTheme
+import ru.pet.passmanager.uikit.theme.LocalThemeIsDark
 
 @OptIn(ExperimentalCupertinoApi::class)
 @Composable

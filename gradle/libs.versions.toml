@@ -18,6 +18,8 @@ multiplatformSettings = "1.1.1"
 koin = "3.5.3"
 sqlDelight = "2.0.1"
 cupertion = "0.1.0-alpha03"
+orbit = "6.1.0"
+moko-mvvm = "0.16.1"
 
 [libraries]
 
@@ -46,6 +48,8 @@ sqlDelight-driver-android = { module = "app.cash.sqldelight:android-driver", ver
 sqlDelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 sqlDelight-driver-js = { module = "app.cash.sqldelight:web-worker-driver", version.ref = "sqlDelight" }
 compose-cupertion = { module = "io.github.alexzhirkevich:cupertino", version.ref = "cupertion"  }
+mvi-orbit = { module = "org.orbit-mvi:orbit-core", version.ref = "orbit" }
+moko-mvvm = { module = "dev.icerock.moko:mvvm-core", version.ref = "moko-mvvm" }
 
 [plugins]
 

@@ -8,7 +8,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stac
 import ru.pet.passmanager.App
 import ru.pet.passmanager.presentation.root.component.RootComponent
 import ru.pet.passmanager.presentation.tabs.main.screen.MainContent
-import ru.pet.passmanager.theme.AppTheme
+import ru.pet.passmanager.uikit.theme.AppTheme
 
 @Composable
 internal fun RootScreen(

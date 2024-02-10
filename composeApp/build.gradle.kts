@@ -5,8 +5,6 @@ plugins {
     alias(libs.plugins.buildConfig)
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.sqlDelight)
-    id("kotlin-parcelize")
-    id("kotlin-kapt")
 
 }
 
@@ -54,6 +52,9 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.multiplatformSettings)
             implementation(libs.koin.core)
+
+            implementation(libs.moko.mvvm)
+            implementation(libs.mvi.orbit)
 
             implementation(libs.compose.cupertion)
         }

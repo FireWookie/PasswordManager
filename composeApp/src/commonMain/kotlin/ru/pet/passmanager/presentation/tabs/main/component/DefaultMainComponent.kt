@@ -66,11 +66,11 @@ class DefaultMainComponent(
         }
     }
 
-    private fun profileTabComponent(componentContext: ComponentContext): ProfileComponent {
+    private fun profileTabComponent(componentContext: ComponentContext): DefaultProfileComponent {
         return DefaultProfileComponent(componentContext)
     }
 
-    private fun passwordTabComponent(componentContext: ComponentContext): PasswordComponent {
+    private fun passwordTabComponent(componentContext: ComponentContext): DefaultPasswordComponent {
         return DefaultPasswordComponent(componentContext)
     }
 }
