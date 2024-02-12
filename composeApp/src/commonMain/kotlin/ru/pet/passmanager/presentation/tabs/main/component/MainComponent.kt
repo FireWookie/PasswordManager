@@ -4,9 +4,7 @@ import com.arkivanov.decompose.ExperimentalDecomposeApi
 import com.arkivanov.decompose.router.pages.ChildPages
 import com.arkivanov.decompose.value.Value
 import ru.pet.passmanager.presentation.tabs.password.component.DefaultPasswordComponent
-import ru.pet.passmanager.presentation.tabs.password.component.PasswordComponent
 import ru.pet.passmanager.presentation.tabs.profile.component.DefaultProfileComponent
-import ru.pet.passmanager.presentation.tabs.profile.component.ProfileComponent
 
 interface MainComponent {
     fun changeTab(index: Int)

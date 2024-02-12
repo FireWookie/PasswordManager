@@ -2,7 +2,9 @@ package ru.pet.passmanager.presentation.tabs.password.component
 
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.essenty.instancekeeper.getOrCreate
+import io.github.aakira.napier.Napier
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 import org.koin.core.component.inject
 import org.orbitmvi.orbit.syntax.simple.reduce
 import ru.pet.passmanager.domain.usecases.GetPasswordDBUseCase
@@ -16,7 +18,9 @@ class DefaultPasswordComponent(
 {
     override val store: PasswordStore = instanceKeeper.getOrCreate { PasswordStore() }
 
-    private val getPasswordDBUseCase: GetPasswordDBUseCase by inject()
+    init {
+        getDbData()
+    }
 
     override fun dispatch(action: PasswordAction) {
         when(action) {
@@ -48,13 +52,26 @@ class DefaultPasswordComponent(
     }
 
     private fun clearContent() = intent {
-        reduce { state.copy(newPassword = "",
-            newName = "",
-            newLogin = "",
-            newDescription = "") }
+        reduce {
+            state.copy(
+                newPassword = "",
+                newName = "",
+                newLogin = "",
+                newDescription = ""
+            )
+        }
     }
 
-    private fun getDbData() {
-//        store.launchOperation(operation = {  })
+    private fun getDbData() = intent {
+        store.launchOperation(
+            operation = { store.getAllPassword(state) },
+            success = { items ->
+                println("Items: $items")
+                reduceLocal { state.copy(passwords = items) }
+            },
+            failure = {
+                println("Fail: $it")
+            }
+        )
     }
 }

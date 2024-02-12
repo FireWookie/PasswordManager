@@ -9,15 +9,12 @@ import com.arkivanov.decompose.router.pages.childPages
 import com.arkivanov.decompose.router.pages.select
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.value.Value
-import io.ktor.serialization.Configuration
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import ru.pet.passmanager.presentation.root.component.RootNavigation
 import ru.pet.passmanager.presentation.tabs.password.component.DefaultPasswordComponent
-import ru.pet.passmanager.presentation.tabs.password.component.PasswordComponent
 import ru.pet.passmanager.presentation.tabs.profile.component.DefaultProfileComponent
-import ru.pet.passmanager.presentation.tabs.profile.component.ProfileComponent
 
 @OptIn(ExperimentalDecomposeApi::class)
 class DefaultMainComponent(

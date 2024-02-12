@@ -1,27 +1,14 @@
 package ru.pet.passmanager
 
-import android.app.Application
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.arkivanov.decompose.defaultComponentContext
-import ru.pet.passmanager.di.KoinInjector
+import ru.pet.passmanager.app.PassManagerApp
 import ru.pet.passmanager.presentation.root.component.DefaultRootComponent
 import ru.pet.passmanager.presentation.root.screen.RootScreen
-
-class AndroidApp : Application() {
-    companion object {
-        lateinit var INSTANCE: AndroidApp
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        INSTANCE = this
-        KoinInjector.koinApp.koin
-    }
-}
 
 class AppActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,5 +27,5 @@ internal actual fun openUrl(url: String?) {
         data = uri
         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     }
-    AndroidApp.INSTANCE.startActivity(intent)
+    PassManagerApp.INSTANCE.startActivity(intent)
 }

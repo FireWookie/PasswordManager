@@ -53,6 +53,7 @@ kotlin {
             implementation(libs.multiplatformSettings)
             implementation(libs.koin.core)
 
+
             implementation(libs.moko.mvvm)
             implementation(libs.mvi.orbit)
 
@@ -70,6 +71,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
             implementation(libs.ktor.client.okhttp)
             implementation(libs.sqlDelight.driver.android)
+            implementation(libs.koin.android)
         }
 
         iosMain.dependencies {

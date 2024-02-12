@@ -12,7 +12,7 @@ class GetPasswordDBUseCase(
 ): BaseUseCase<GetPasswordDBUseCase.Params, List<PasswordUI>>() {
     class Params
 
-    override suspend fun execute(params: Params, scope: CoroutineScope): Either<Failure, List<PasswordUI>> {
+    override suspend fun execute(params: Params): Either<Failure, List<PasswordUI>> {
         return passwordDBRepository.getPassword()
     }
 }

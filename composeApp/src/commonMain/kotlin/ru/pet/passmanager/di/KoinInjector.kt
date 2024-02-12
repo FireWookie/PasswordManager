@@ -6,7 +6,7 @@ import org.koin.core.module.Module
 
 object KoinInjector {
     val koinApp = startKoin {
-        loadKoinModules(
+        modules(
             listOf(
                 preferencesModule,
                 useCaseModule,

@@ -1,5 +1,6 @@
 package ru.pet.passmanager.presentation.tabs.password.component
 
+import kotlinx.coroutines.CoroutineScope
 import ru.pet.passmanager.domain.models.PasswordUI
 import ru.pet.passmanager.platform.MviStore
 
@@ -28,6 +29,6 @@ sealed interface PasswordSideEffect {
 
 }
 
-class PasswordStore : MviStore<PasswordState, PasswordAction, PasswordSideEffect>(
+class PasswordStore: MviStore<PasswordState, PasswordAction, PasswordSideEffect>(
     state = PasswordState()
-)
+),  PasswordInteractor by PasswordInteractorImpl()
